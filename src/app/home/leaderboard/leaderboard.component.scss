@@ -1,0 +1,46 @@
+.sidebar {
+	background: #fafafa;
+	height: 100vh;
+    box-shadow: -5px 0 5px 0 #ddd;
+
+    .title {
+		text-align: center;
+		padding: 10px;
+		text-transform: uppercase;
+		color: #fff;
+		background: #f00;
+    }
+
+	.player {
+		padding: 5px 10px;
+		margin-bottom: 5px;
+		background: #fff;
+
+		.profile-pic-box {
+			height: 50px;
+			width: 50px;
+			overflow: hidden;
+			border-radius: 50%;
+
+			.profile-pic {
+				max-height: 50px;
+				max-width: 50px;
+			}
+		}
+
+		.name {
+			font-size: 11px;
+			line-height: 1em;
+    		font-weight: 600;    		
+		}
+
+		.score {
+			font-size: 24px;
+			line-height: 1em;
+			font-weight: 100;
+			color: green;
+			display: block;
+			margin: 5px 0 -5px 0;
+		}
+	}
+}

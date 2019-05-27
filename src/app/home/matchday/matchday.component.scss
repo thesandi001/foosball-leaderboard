@@ -1,0 +1,56 @@
+.main-title {
+	font-size: 48px;
+	font-weight: 100;
+	text-align: center;
+	padding-bottom: 10px;
+	margin-bottom: 10px;
+	border-bottom: solid 3px #444;
+}
+.player-holder {
+
+	.picture-holder {
+		height: 200px;
+		width: 200px;
+		overflow: hidden;
+
+		.player-picture {
+			max-height: 200px;
+			max-width: 200px;
+		}		
+	}
+
+	.score {
+		font-size: 32px;
+		font-weight: 100;
+		color: green;
+	}
+}
+
+.vs {
+	font-size: 32px;
+	font-weight: 100;
+	color: red;
+	margin-top: 10px;
+}
+
+.action-box {
+	text-align: center;
+    background: #ddd;
+    width: 300px;
+    margin: 0 auto;
+    border-radius: 10px;
+    padding: 10px;
+}
+
+.percentage {
+	font-weight: bold;
+    font-size: 48px;
+    color: red;    
+}
+.caption {
+	font-size: 14px;
+    color: #000;
+    display: block;
+    line-height: 1em;
+    padding-top: 10px;
+}

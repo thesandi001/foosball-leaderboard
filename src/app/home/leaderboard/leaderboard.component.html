@@ -1,0 +1,16 @@
+<div class="sidebar">
+	<div class="title">Leaderboard</div>
+  <div *ngFor="let player of players" class="player">
+    <div class="row">
+      <div class="col-4">
+        <div class="profile-pic-box">
+          <img class="profile-pic" src="{{ player?.picture }}">
+        </div>
+      </div>
+      <div class="col">        
+        <span class="score">{{ player?.score }}</span>
+        <span class="name">{{ player?.player }}</span>
+      </div>
+    </div>
+  </div>
+</div>

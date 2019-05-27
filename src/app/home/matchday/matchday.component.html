@@ -1,0 +1,113 @@
+<div class="main-title">
+	Foosball Match
+</div>
+<div class="row">
+  <div class="col">
+    <mat-form-field>
+      <mat-label>Select Player 1</mat-label>
+      <mat-select [(ngModel)]="player1" name="player" (selectionChange)="checkELO()">
+        <mat-option *ngFor="let player of players" [value]="player">
+          {{ player.player }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <div class="player-holder" *ngIf="player1">
+    	<div class="picture-holder">
+    		<img src="{{ player1.picture }}" class="player-picture">
+    	</div>
+    	<div>{{ player1.player }}</div>
+    	<div class="score">
+    		{{ player1.score }}
+    		<span *ngIf="player1?.new_score"> -> {{ player1?.new_score }}</span>
+    	</div>
+    </div>
+  </div>
+  <div class="col">
+    <mat-form-field>
+      <mat-label>Select Player 2</mat-label>
+      <mat-select [(ngModel)]="player2" name="player" (selectionChange)="checkELO()">
+        <mat-option *ngFor="let player of players" [value]="player">
+          {{ player.player }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <div class="player-holder" *ngIf="player2">
+    	<div class="picture-holder">
+    		<img src="{{ player2.picture }}" class="player-picture">
+    	</div>
+    	<div>{{ player2.player }}</div>
+    	<div class="score">
+    		{{ player2.score }}
+    		<span *ngIf="player2?.new_score"> -> {{ player2?.new_score }}</span>
+    	</div>
+    </div>
+  </div>
+  <div class="col-1">
+  	<div class="vs">v/s</div>
+  </div>
+  <div class="col">
+    <mat-form-field>
+      <mat-label>Select Player 3</mat-label>
+      <mat-select [(ngModel)]="player3" name="player" (selectionChange)="checkELO()">
+        <mat-option *ngFor="let player of players" [value]="player">
+          {{ player.player }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <div class="player-holder" *ngIf="player3">
+    	<div class="picture-holder">
+    		<img src="{{ player3.picture }}" class="player-picture">
+    	</div>
+    	<div>{{ player3.player }}</div>
+    	<div class="score">
+    		{{ player3.score }}
+    		<span *ngIf="player3?.new_score"> -> {{ player3?.new_score }}</span>
+    	</div>
+    </div>
+  </div>
+  <div class="col">
+    <mat-form-field>
+      <mat-label>Select Player 4</mat-label>
+      <mat-select [(ngModel)]="player4" name="player" (selectionChange)="checkELO()">
+        <mat-option *ngFor="let player of players" [value]="player">
+          {{ player.player }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+    <br>
+    <div class="player-holder" *ngIf="player4">
+    	<div class="picture-holder">
+    		<img src="{{ player4.picture }}" class="player-picture">
+    	</div>
+    	<div>{{ player4.player }}</div>
+    	<div class="score">
+    		{{ player4.score }}
+    		<span *ngIf="player4?.new_score"> -> {{ player4?.new_score }}</span>
+    	</div>
+    </div>
+  </div>
+</div>
+<hr>
+<div class="row" *ngIf="team1?.probability_percent && team2?.probability_percent">
+	<div class="col">
+		<div class="action-box">
+			<div class="percentage">
+				<span class="caption">Probability of Winning</span>
+				{{ team1?.probability_percent }}%				
+			</div>
+			<button mat-flat-button color="primary" (click)="declareWinner(1)">Declare Winner</button>
+		</div>
+	</div>
+	<div class="col">
+		<div class="action-box">
+			<div class="percentage">
+				<span class="caption">Probability of Winning</span>
+				{{ team2?.probability_percent }}%
+			</div>
+			<button mat-flat-button color="primary" (click)="declareWinner(2)">Declare Winner</button>
+		</div>
+	</div>
+</div>
