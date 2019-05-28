@@ -14,7 +14,8 @@
     <br>
     <div class="player-holder" *ngIf="player1">
     	<div class="picture-holder">
-    		<img src="{{ player1.picture }}" class="player-picture">
+    		<img *ngIf="player1?.picture" class="player-picture" src="{{ player1?.picture }}">
+        <img *ngIf="!player1?.picture" class="player-picture" src="http://winkeyecare.com/wp-content/uploads/2013/03/Empty-Profile-Picture-450x450.jpg">
     	</div>
     	<div>{{ player1.player }}</div>
     	<div class="score">
@@ -35,7 +36,8 @@
     <br>
     <div class="player-holder" *ngIf="player2">
     	<div class="picture-holder">
-    		<img src="{{ player2.picture }}" class="player-picture">
+    		<img *ngIf="player2?.picture" class="player-picture" src="{{ player2?.picture }}">
+        <img *ngIf="!player2?.picture" class="player-picture" src="http://winkeyecare.com/wp-content/uploads/2013/03/Empty-Profile-Picture-450x450.jpg">
     	</div>
     	<div>{{ player2.player }}</div>
     	<div class="score">
@@ -59,7 +61,8 @@
     <br>
     <div class="player-holder" *ngIf="player3">
     	<div class="picture-holder">
-    		<img src="{{ player3.picture }}" class="player-picture">
+    		<img *ngIf="player3?.picture" class="player-picture" src="{{ player3?.picture }}">
+        <img *ngIf="!player3?.picture" class="player-picture" src="http://winkeyecare.com/wp-content/uploads/2013/03/Empty-Profile-Picture-450x450.jpg">
     	</div>
     	<div>{{ player3.player }}</div>
     	<div class="score">
@@ -80,7 +83,8 @@
     <br>
     <div class="player-holder" *ngIf="player4">
     	<div class="picture-holder">
-    		<img src="{{ player4.picture }}" class="player-picture">
+    		<img *ngIf="player4?.picture" class="player-picture" src="{{ player4?.picture }}">
+        <img *ngIf="!player4?.picture" class="player-picture" src="http://winkeyecare.com/wp-content/uploads/2013/03/Empty-Profile-Picture-450x450.jpg">
     	</div>
     	<div>{{ player4.player }}</div>
     	<div class="score">
